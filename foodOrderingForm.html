@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<title>MY FINAL PROJECT</title>
+<link rel="stylesheet" type="text/css" href="food.css"> <!--external css -->
+<script type="text/javascript" src="food.js"></script>  <!--external javascript -->
+</head>
+<body>
+<h1>FOOD-WOOD CAFE</h1>
+<p>This is food ordering website.Users can get food of their choice at reasonable price!!!</p>
+<br>
+<!-- Generating menu for food -->
+<p id="u">MENU</p>
+<table id="c" border="1">
+<tr>
+<th>ITEM NAME</th>
+<th>IMAGE</th>
+<th>PRICE</th>
+</tr>
+
+<tr>
+<td id="b">PIZZA</td>
+<td ><img src="pizza.jpg" width="150" height="150"></td>
+<td>349/-</td>
+</tr
+
+<tr>
+<td id="b">BURGER</td>
+<td><img src="burger.jpg" width="150" height="150"></td>
+<td>165/-</td>
+</tr>
+
+<tr>
+<td id="b">WHITE SAUCE PASTA</td>
+<td><img src="white sauce pasta.jpg" width="150" height="150"></td>
+<td>75/-</td>
+</tr>
+
+<tr>
+<td id="b">FRENCH FRIES</td>
+<td><img src="french fries.jpg" width="150" height="150"></td>
+<td>99/-</td>
+</tr>
+
+<tr>
+<td id="b">COLA</td>
+<td><img src="cola.png" width="150" height="150"></td>
+<td>15/-</td>
+</tr>
+</table>
+<!-- fetching customer details -->
+
+<h2>ORDER DETAILS</h2>
+<form id="f">
+First NAME:<br>
+<input type="text" name="firstname" id="firstname" required onblur="validateFirstName();"><span id="fnamePrompt"></span><br><br>
+Last Name:<br>
+<input type ="text" name="lastname" id="lastname" onblur="validateLastName();"><span id="lnamePrompt"></span><br><br>
+Contact No.:<br>
+<input type="text" name="contactno." id="contactno." placeholder="xxx-xxx-xxxx" onblur="validatePhone();"><span id="phonePrompt"></span><br><br>
+<p id="u" style="text-align:left">Order List</p>
+<table border="1">
+<tr>
+<th>Item selected</th>
+<th>Quantity</th>
+</tr>
+<tr>
+<td><input type="checkbox" name="food" value="Pizza">Pizza</td>
+<td><input type="number" name="quantity" id="Q1"></td>
+</tr>
+<tr>
+<td><input type="checkbox" name="food" value="Burger">Burger</td>
+<td><input type="number" name="quantity" id="Q2"></td>
+</tr>
+<tr>
+<td><input type="checkbox" name="food" value="White Sauce Pasta">White Sauce Pasta</td>
+<td><input type="number" name="quantity" id="Q3"></td>
+</tr>
+<tr>
+<td><input type="checkbox" name="food" value="French Fries">French Fries</td>
+<td><input type="number" name="quantity" id="Q4"></td>
+<tr>
+<td><input type="checkbox" name="food" value="Cola">Cola</td>
+<td><input type="number" name="quantity" id="Q5"></td>
+</tr>
+<tr style="background-color:silver">
+<br><br>
+<!-- will call js function to calculate total amount of order -->
+<td  colspan="2" class="button" id="button"><span  onclick="calcOutput()">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ORDER NOW</span></td>
+</tr>
+</table>
+<br><br>
+<span id="orderConfirm">&nbsp;</span>
+
+
+</form>
+</body>
+</html>
